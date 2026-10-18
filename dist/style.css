@@ -1,0 +1,139 @@
+@font-face{font-family:Lilita;src:url('assets/lilita-one.ttf') format('truetype');font-display:swap}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:#fffaf0;color:#fff;font-family:Lilita,'Arial Rounded MT Bold',sans-serif}.book{height:100svh;height:100dvh;display:grid;place-items:center;padding:max(8px,env(safe-area-inset-top)) max(6px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left))}.stage{position:relative;width:var(--stage-width, min(96vw,52vh));height:var(--stage-height,92vh);container-type:inline-size;isolation:isolate}.jungle{position:absolute;width:100%;height:97%;object-fit:fill;z-index:-1}.heading{position:absolute;top:5.8%;left:4%;width:92%;text-align:center;z-index:2}.wood{color:#fff7e8;background:linear-gradient(175deg,transparent 0 43%,#85300a55 44% 46%,transparent 47%),repeating-linear-gradient(1deg,#c9551a 0 13px,#de6d22 14px 17px,#9d3d13 18px 20px);border:.6cqw solid #48220f;border-radius:2.5cqw;box-shadow:inset 0 .8cqw #ffb34b,inset 0 -1cqw #81310e,0 0 0 1cqw #fffef3,0 .5cqw 0 1.7cqw #143629,0 1cqw 0 2.2cqw #fffef3,0 2cqw 1cqw #082b2844;text-shadow:0 .6cqw #4c220f;-webkit-text-stroke:1.1cqw #48220f;paint-order:stroke fill}.eyebrow{font-size:4.7cqw;line-height:1.25;margin:0 auto 2.3cqw;padding:1.3cqw 1cqw;width:77%;white-space:nowrap}.title{margin:0 0 2.2cqw;line-height:.99;font-weight:400;filter:drop-shadow(0.5cqw 0 #fff) drop-shadow(-0.5cqw 0 #fff) drop-shadow(0 0.5cqw #fff) drop-shadow(0 -0.5cqw #fff)}.title span{display:block;paint-order:stroke fill;-webkit-text-stroke:2.7cqw #063c2d;text-shadow:0 1cqw #022c20}.name{font-size:16.1cqw;color:#ffd23b;letter-spacing:-.5cqw}.adventure{font-size:10.6cqw;color:#fffef4;letter-spacing:-.25cqw;white-space:nowrap}.story{width:76%;margin:0 auto;padding:1.7cqw .7cqw;font-size:4.5cqw;line-height:1.1}.story em{font-style:normal;color:#ffdb45}.hero{position:absolute;left:8%;bottom:13%;width:79%;height:auto;max-height:48%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 1cqw .3cqw #0c3b2938)}button{font-family:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible{outline:4px solid #ffdc48;outline-offset:10px}button:active{translate:0 3px;filter:brightness(.96)}.explore{position:absolute;bottom:7.4%;left:19%;width:62%;font-size:6cqw;padding:2.2cqw 1cqw;line-height:1.1;white-space:nowrap}.explore span{margin-left:1cqw}.footer{position:absolute;bottom:0;left:5%;right:5%;display:flex;justify-content:space-between;color:#517253;font-size:2.6cqw;letter-spacing:.1cqw}.live{color:#82977a}#next{position:absolute;inset:0}#next:not([hidden]){display:grid;align-items:center;padding:7%}.next-card{padding:8% 6%;border:5px solid #fff9e9;border-radius:28px;background:#fff9e9f5;color:#173d2c;box-shadow:0 8px 0 #123e2d30;text-align:center}.chapter{font-size:3cqw;letter-spacing:.3cqw;color:#718352}h2{font-size:10cqw;line-height:1.03;margin:5% 0;color:#184c32;font-weight:400}.next-card>p:not(.chapter){font:4.5cqw/1.5 Georgia,serif}.preview-note{font:3.2cqw/1.5 sans-serif;color:#677763;margin:8% 0}.back{font-size:4cqw;padding:3cqw;margin:4cqw 0 1cqw}[hidden]{display:none!important}
+
+/* Bare sticker lettering, with staggered storybook entrances. */
+.eyebrow,.story{color:#fffef4;paint-order:stroke fill;-webkit-text-stroke:1.2cqw #063c2d;text-shadow:0 .45cqw #022c20;filter:drop-shadow(0 .2cqw .2cqw #082b2844)}
+.hero{transform-origin:50% 90%;animation:sticker-arrive .85s .3s both cubic-bezier(.2,.8,.3,1),sticker-wiggle 7s 1.8s infinite ease-in-out}
+@keyframes text-arrive{0%{opacity:0;transform:translateY(10px) scale(.96)}70%{opacity:1;transform:translateY(-2px) scale(1.01)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes sticker-arrive{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+@keyframes sticker-wiggle{0%,60%,100%{transform:rotate(0)}68%{transform:rotate(-1.2deg)}76%{transform:rotate(1deg)}84%{transform:rotate(-.6deg)}92%{transform:rotate(.3deg)}}
+@media(prefers-reduced-motion:reduce){.eyebrow,.title,.story,.hero{animation:none}}
+
+@font-face{font-family:'Acme';src:url('assets/acme.ttf') format('truetype');font-weight:400;font-display:swap}
+.title{font-family:Lilita,'Arial Rounded MT Bold',sans-serif}
+.eyebrow,.story{font-family:'Acme',sans-serif;font-weight:400;letter-spacing:0;-webkit-text-stroke:.65cqw #063c2d;text-shadow:0 .3cqw #022c20}
+.eyebrow{font-size:5.8cqw;line-height:1.2}
+.story{font-size:5.5cqw;line-height:1.15;width:84%}
+
+.text-word{display:inline-block;transform-origin:50% 80%}.story em{display:inline-block}.eyebrow,.story{-webkit-text-stroke:.5cqw #063c2d}
+
+.name{position:relative;color:#ffdf00}
+/* Overlay only the fill, preserving the dark outline beneath the gradient. */
+.title .name-gradient{position:absolute;inset:0;color:transparent;background:linear-gradient(180deg,#fff75c 5%,#ffe600 42%,#ffbd00 72%,#ff9800 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:0;text-shadow:none;pointer-events:none}
+
+/* GSAP owns the combined sticker motion. */
+.hero{animation:none;transform-origin:50% 92%}
+
+/* Story copy fits the original scene anchors. */
+#opening .eyebrow{width:96%;font-size:4.8cqw;white-space:normal;text-wrap:balance}
+#opening .story{font-size:5cqw;width:94%;text-wrap:balance}
+.party-tagline{font:3.2cqw/1.2 Acme,sans-serif;margin:1.3cqw 0 0;color:#56734e}
+/* Both chapters share the same straight, editable storybook type. */
+#next:not([hidden]){display:block;padding:0}
+.scene-two .heading{top:5.8%}
+.scene-two .eyebrow{font-size:4.5cqw;width:96%;white-space:normal;text-wrap:balance}
+.scene-two .title{margin:0 0 2.2cqw;line-height:.99}
+.scene-two .name{font-size:10.5cqw;letter-spacing:-.2cqw;white-space:nowrap}
+.scene-two .adventure{font-size:15cqw;color:#fffef4}
+.scene-two .story{font-size:5.5cqw}
+.scene-two .dino-hero{left:2%;width:96%;bottom:13.5%;max-height:49%;transform-origin:50% 85%}
+.scene2-background{z-index:-1}
+.scene-back{position:absolute;bottom:2.8%;left:5%;background:#fffaf0e8;border:0;border-radius:2cqw;color:#184c32;padding:.7cqw 2cqw;font:3.3cqw Acme,sans-serif}
+#discovery{position:absolute;inset:0;padding:7%;display:grid;align-items:center}
+#leaf-transition{position:fixed;inset:0;z-index:100;overflow:hidden;pointer-events:auto}
+.leaf-panel{position:absolute;top:-5%;height:110%;width:62%;will-change:transform;overflow:hidden;background:#176735;filter:drop-shadow(0 0 10px #06291b55)}
+.leaf-panel img{display:block;width:100%;height:100%;object-fit:cover}
+.leaf-left{left:0;clip-path:polygon(0 0,90% 0,100% 10%,86% 20%,100% 30%,88% 40%,100% 50%,86% 60%,100% 70%,88% 80%,100% 90%,90% 100%,0 100%)}
+.leaf-right{right:0;clip-path:polygon(10% 0,100% 0,100% 100%,10% 100%,0 90%,12% 80%,0 70%,14% 60%,0 50%,12% 40%,0 30%,14% 20%,0 10%)}
+.leaf-right img{transform:scaleX(-1)}
+#load-status{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);z-index:110;background:#fffaf0;color:#184c32;border-radius:12px;font:16px Acme,sans-serif;margin:0;text-align:center}
+#load-status:not(:empty){padding:12px 18px}
+
+/* Scene 3: inspect the footprint, then reveal the invitation clue. */
+#discovery{display:block;padding:0}
+.scene-three .heading{top:5.8%}
+.scene-three .eyebrow{font-size:5.3cqw;width:94%}
+.scene-three .title{margin:0 0 2.2cqw;line-height:.99}
+.scene-three .name{font-size:15cqw}
+.scene-three .adventure{font-size:12cqw}
+.scene-three .story{font-size:5cqw;width:96%}
+.scene-three .discovery-hero{left:4%;width:92%;max-height:38%;bottom:27%;transform-origin:50% 90%}
+.fossil{position:absolute;bottom:14%;left:32%;width:36%;height:14%;background:none;border:0;padding:0;color:#fff8d7;font-family:Acme,sans-serif;filter:drop-shadow(0 0 6px #ffde6980)}
+.fossil svg{display:block;height:80%;width:100%;overflow:visible}
+.fossil span{display:block;font-size:3cqw;line-height:1.1;paint-order:stroke fill;-webkit-text-stroke:.65cqw #59391f;letter-spacing:.15cqw}
+.fossil[aria-expanded="true"]{filter:drop-shadow(0 0 10px #fff28d)}
+.clue-copy{margin:0 auto;width:96%;font:5.5cqw/1.2 Acme,sans-serif;color:#fffef4;paint-order:stroke fill;-webkit-text-stroke:.65cqw #063c2d;text-shadow:0 .3cqw #022c20}
+.clue-copy strong{font-weight:400;color:#ffe949}
+#party-preview{position:absolute;inset:0;display:grid;align-items:center;padding:7%}
+
+/* Keep incoming content hidden until GSAP has applied its starting state. */
+.scene-pending .heading,.scene-pending .hero,.scene-pending .fossil,.scene-pending .explore,.scene-pending .scene-back,.scene-pending .next-card{visibility:hidden}
+button{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none}
+.scene-three .discovery-hero{bottom:31%;max-height:36%}
+.fossil{bottom:16%;left:30%;width:40%;height:13%;min-height:0;padding:1.1cqw 2cqw .8cqw;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4cqw;background:linear-gradient(145deg,#ffe0a1,#dca45d);border:.6cqw solid #71451f;border-radius:5cqw;box-shadow:inset 0 .7cqw #fff0c1,0 .8cqw 0 #8c582c,0 0 0 .65cqw #fff9df;filter:none;appearance:none;-webkit-appearance:none;transition:box-shadow .15s,background-color .15s}
+.fossil svg{height:calc(100% - 4cqw);width:auto;max-width:100%;flex:1;min-height:0;overflow:visible;pointer-events:none}
+.fossil span{font-size:3.1cqw;line-height:1.15;flex-shrink:0;letter-spacing:.05cqw;color:#59391f;-webkit-text-stroke:0;pointer-events:none}
+.fossil:active{translate:0 .45cqw;box-shadow:inset 0 .25cqw #fff0c1,0 .35cqw 0 #8c582c,0 0 0 .65cqw #fff9df;filter:none}
+.fossil:focus:not(:focus-visible){outline:none}
+.fossil:focus-visible{outline:.8cqw solid #ffe455;outline-offset:1.4cqw}
+.fossil[aria-expanded="true"]{background:linear-gradient(145deg,#fff2b6,#efc875);filter:none}
+
+/* The illustrated objects are the controls; hints remain plain text. */
+.art-trigger{appearance:none;-webkit-appearance:none;background:none;border:0;box-shadow:none;padding:0;line-height:0;border-radius:3cqw;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.scene-two button.dino-hero{height:49%;max-height:49%}
+.art-trigger img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.art-trigger:active{translate:none;filter:brightness(1.06)}
+.art-trigger:focus:not(:focus-visible){outline:none}
+.art-trigger:focus-visible{outline:.7cqw solid #ffdf62;outline-offset:1cqw}
+.fossil{left:30%;width:40%;bottom:13.5%;height:16%;min-height:44px;display:block;padding:0;background:none;border:0;box-shadow:none;filter:drop-shadow(0 .6cqw .5cqw #40280f38);border-radius:4cqw}
+.fossil:active,.fossil[aria-expanded="true"]{background:none;box-shadow:none;translate:none;filter:drop-shadow(0 0 1cqw #61e9e280)}
+.tap-hint{position:absolute;left:7%;bottom:7%;width:86%;margin:0;text-align:center;font:4.2cqw/1.2 Acme,sans-serif;color:#fffbea;paint-order:stroke fill;-webkit-text-stroke:.6cqw #214434;text-shadow:0 .3cqw #214434;pointer-events:none}
+.scene-three .tap-hint{font-size:3.8cqw;bottom:8%}
+.scene-pending .tap-hint{visibility:hidden}
+
+/* Finale: separate corner stickers leave the center free for event details. */
+#party-preview{display:block;padding:0}
+.scene-four .heading{top:5.8%}
+.scene-four .eyebrow{font-size:4.5cqw;width:96%;white-space:normal;text-wrap:balance}
+.scene-four .title{line-height:.99;margin:0 0 2cqw}
+.scene-four .name{font-size:15cqw}
+.scene-four .adventure{font-size:16cqw}
+.scene-four .story{font-size:5cqw;width:92%}
+.party-details{position:absolute;top:35%;left:13%;width:74%;padding:3.5cqw 4.5cqw;background:#fff8ddec;border:.65cqw solid #fffdf0;border-radius:4cqw;box-shadow:0 1cqw 0 #194d3840;color:#18432f;text-align:center;z-index:2}
+.party-details h3{margin:0 0 2cqw;font:4.5cqw/1.2 Lilita,sans-serif;font-weight:400;color:#266040}
+.party-details dl{margin:0;display:grid;gap:1.7cqw}
+.party-details dl>div{border-top:1px solid #b6c8a3;padding-top:1.7cqw}
+.party-details dt{font:3cqw/1.2 Acme,sans-serif;text-transform:uppercase;letter-spacing:.15cqw;color:#56734e}
+.party-details dd{margin:.6cqw 0 0;font:4.2cqw/1.2 Acme,sans-serif;overflow-wrap:anywhere}
+.party-sticker{position:absolute;object-fit:contain;object-position:bottom;filter:drop-shadow(0 .6cqw .4cqw #24422a33);transform-origin:50% 95%;pointer-events:none}
+.party-andrew{left:0;bottom:5%;width:42%;height:31%}
+.party-cat{right:0;bottom:5%;width:32%;height:26%}
+.replay-story{position:absolute;bottom:7%;left:43%;width:24%;border:0;background:#fff7dbed;color:#235038;border-radius:3cqw;padding:1.5cqw .5cqw;font:3.3cqw/1.2 Acme,sans-serif;z-index:3}
+.scene-four .scene-back{z-index:3}
+.scene-pending .party-details,.scene-pending .party-sticker,.scene-pending .replay-story{visibility:hidden}
+
+/* Buried clue: the fossil remains completely hidden until the third tap. */
+.scene-three .eyebrow{font-size:4.8cqw}
+.scene-three .discovery-hero{bottom:25%;max-height:33%;width:88%;left:6%}
+.fossil{bottom:11.5%;height:14%;width:38%;left:31%}
+.fossil .ground-bump{position:absolute;inset:0;width:100%;height:100%;max-width:none;display:block;overflow:visible;transition:opacity .35s,transform .35s;pointer-events:none}
+.fossil .buried-fossil{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(8px) scale(.85);transition:opacity .45s,transform .55s;pointer-events:none}
+.dig-crack{opacity:0;transition:opacity .2s}
+.fossil[data-dig="1"] .dig-crack{opacity:.5}
+.fossil[data-dig="2"] .dig-crack{opacity:1}
+.fossil[data-dig="2"] .ground-bump{transform:scaleY(.85);transform-origin:50% 85%}
+.fossil[data-dig="3"] .ground-bump{opacity:0;transform:scale(.8);visibility:hidden}
+.fossil[data-dig="3"] .buried-fossil{opacity:1;visibility:visible;transform:none}
+.fossil:not([data-dig="3"]){filter:none}
+.scene-three .tap-hint{bottom:7%}
+/* A keepsake expedition pass, with editable event information. */
+.party-details.adventure-pass{top:32.5%;left:10%;width:80%;padding:4cqw 4.5cqw 3.5cqw;background:radial-gradient(circle at 0 50%,#e8ca88 0 1cqw,transparent 1.1cqw),linear-gradient(140deg,#fff5cc,#f2d99f);border:.65cqw solid #fff8e4;border-radius:2cqw 5cqw 2cqw 5cqw;box-shadow:0 1.3cqw 0 #754e2640, inset 0 0 0 .6cqw #c9954866}
+.pass-kicker{margin:-1cqw auto 1.8cqw;width:max-content;max-width:100%;padding:1cqw 3cqw;border-radius:1cqw;background:#24634b;color:#fff4bd;font:2.8cqw/1.1 Acme,sans-serif;letter-spacing:.25cqw}
+.party-details h3{font-size:6cqw;line-height:1.05;margin:0;color:#235b3e;text-shadow:0 .3cqw #fff9e1}
+.pass-rule{border-top:.5cqw dashed #bd8a48;margin:2.5cqw 0}
+.party-details dl{gap:2.1cqw;text-align:left}
+.party-details dl>div{border:0;padding:0;display:grid;grid-template-columns:8cqw 1fr;gap:2.2cqw;align-items:center}
+.detail-icon{display:grid;place-items:center;width:8cqw;height:8cqw;background:#e4b456;border:.4cqw solid #fff5cd;border-radius:50%;box-shadow:0 .4cqw #b17b3c}
+.detail-icon svg{width:5cqw;height:5cqw;fill:none;stroke:#285a42;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.party-details dt{text-transform:none;font-size:3cqw;color:#6d663f;letter-spacing:.04cqw}
+.party-details dd{font-size:4cqw;color:#204c37;margin:.5cqw 0 0;line-height:1.15}
+@media(prefers-reduced-motion:reduce){.ground-bump,.buried-fossil,.dig-crack{transition:none!important}}
